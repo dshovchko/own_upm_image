@@ -17,7 +17,7 @@
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '4.6.2.20161226';
+$plugin['version'] = '4.8.1.20200724';
 $plugin['author'] = 'Dmitry Shovchko';
 $plugin['author_uri'] = 'http://github.com/dshovchko';
 $plugin['description'] = 'More powerful image display';
@@ -145,7 +145,7 @@ upm_image_install();
 				}
 			}
 
-			$out = '<img src="'.$image_url.'"'.
+			$out = '<img loading="lazy" src="'.$image_url.'"'.
 				( ($id and !$wraptag) ? ' id="'.$id.'"' : '').
 				( ($class and !$wraptag) ? ' class="'.$class.'"' : '').
 				( ($w and ($show_width == 'yes')) ? ' width="'.$w.'"' : '' ).
@@ -178,7 +178,7 @@ upm_image_install();
 		{
 			$image_id = doSlash($article_image);
 
-			$rs = safe_row('*', 'txp_image', "id = '$image_id' limit 0, 1");
+			$rs = safe_row('SQL_NO_CACHE *', 'txp_image', "id = '$image_id' limit 0, 1");
 
 			if (!$rs)
 			{
@@ -192,7 +192,7 @@ upm_image_install();
 		{
 			$image_name = doSlash($article_image);
 
-			$rs = safe_row('*', 'txp_image', "name = '$image_name' limit 0, 1");
+			$rs = safe_row('SQL_NO_CACHE *', 'txp_image', "name = '$image_name' limit 0, 1");
 
 			if (!$rs)
 			{
@@ -249,7 +249,7 @@ upm_image_install();
 
 		$images = doSlash(join(',', $images));
 
-		$rs = safe_rows('*', 'txp_image', "id in($images) order by field(id, $images)");
+		$rs = safe_rows('SQL_NO_CACHE *', 'txp_image', "id in($images) order by field(id, $images)");
 
 		if ($rs)
 		{
@@ -293,7 +293,7 @@ upm_image_install();
 									( ($row['caption'] and ($show_title == 'yes')) ? ' title="'.htmlspecialchars($row['caption']).'"' : '' ).
 									( ($class and !$wraptag) ? ' class="'.$class.'"' : '').
 									' onclick="upm_pop_img(this.href, \''.$row['w'].'\', \''.$row['h'].'\', \''.$row['name'].'\', this.title); return false;">'.
-									'<img src="'.$img_url.$thumb.'"'.
+									'<img loading="lazy" src="'.$img_url.$thumb.'"'.
 									($show_width == 'yes' ? ' width="'.$thumb_w.'"' : '').
 									($show_height == 'yes' ? ' height="'.$thumb_h.'"' : '').
 									( ($row['alt'] and ($show_alt == 'yes')) ? ' alt="'.htmlspecialchars($row['alt']).'" title=""' : ' alt=""' ).
@@ -311,7 +311,7 @@ upm_image_install();
 						case 'thumb':
 							if ($thumb_exists)
 							{
-								$out[] = '<img src="'.$img_url.$thumb.'"'.
+								$out[] = '<img loading="lazy" src="'.$img_url.$thumb.'"'.
 									( ($class and !$wraptag) ? ' class="'.$class.'"' : '').
 									($show_width == 'yes' ? ' width="'.$thumb_w.'"' : '').
 									($show_height == 'yes' ? ' height="'.$thumb_h.'"' : '').
@@ -327,7 +327,7 @@ upm_image_install();
 						break;
 
 						default:
-							$temp = '<img src="'.$img_url.$img.'"'.
+							$temp = '<img loading="lazy" src="'.$img_url.$img.'"'.
 								( ($class and !$wraptag) ? ' class="'.$class.'"' : '').
 								($show_width == 'yes' ? ' width="'.$row['w'].'"' : '').
 								($show_height == 'yes' ? ' height="'.$row['h'].'"' : '').
@@ -456,7 +456,7 @@ upm_image_install();
 					list($w, $h) = getimagesize($image_url);
 				}
 
-				$out = '<img src="'.$image_url.'"'.
+				$out = '<img loading="lazy" src="'.$image_url.'"'.
 					( ($id and !$wraptag) ? ' id="'.$id.'"' : '').
 					( ($class and !$wraptag) ? ' class="'.$class.'"' : '').
 					( ($w and ($show_width == 'yes')) ? ' width="'.$w.'"' : '' ).
@@ -488,7 +488,7 @@ upm_image_install();
 
 			$image_id = doSlash($image_id);
 
-			$rs = safe_row('*', 'txp_image', "id = '$image_id' limit 0, 1");
+			$rs = safe_row('SQL_NO_CACHE *', 'txp_image', "id = '$image_id' limit 0, 1");
 
 			if (!$rs)
 			{
@@ -502,7 +502,7 @@ upm_image_install();
 		{
 			$image_name = doSlash($image_name);
 
-			$rs = safe_row('*', 'txp_image', "name = '$image_name' limit 0, 1");
+			$rs = safe_row('SQL_NO_CACHE *', 'txp_image', "name = '$image_name' limit 0, 1");
 
 			if (!$rs)
 			{
@@ -861,7 +861,7 @@ upm_image_install();
 						( ($class and !$wraptag) ? ' class="'.$class.'"' : '').
 						( ($row['caption'] and ($show_title == 'yes')) ? ' title="'.htmlspecialchars($row['caption']).'"' : '' ).
 						' onclick="upm_pop_img(this.href, '.chr(39).$row['w'].chr(39).', '.chr(39).$row['h'].chr(39).', '.chr(39).$row['name'].chr(39).', this.title); return false;">'.
-						'<img src="'.$img_url.$thumb.'"'.
+						'<img loading="lazy" src="'.$img_url.$thumb.'"'.
 						($show_width == 'yes' ? ' width="'.$thumb_w.'"' : '').
 						($show_height == 'yes' ? ' height="'.$thumb_h.'"' : '').
 						( ($row['alt'] and ($show_alt == 'yes')) ? ' alt="'.htmlspecialchars($row['alt']).'" title=""' : ' alt=""' ).
@@ -881,7 +881,7 @@ upm_image_install();
 			case 'thumb':
 				if ($thumb_exists)
 				{
-					$out = '<img src="'.$img_url.$thumb.'"'.
+					$out = '<img loading="lazy" src="'.$img_url.$thumb.'"'.
 						( ($id and !$wraptag) ? ' id="'.$id.'"' : '').
 						( ($class and !$wraptag) ? ' class="'.$class.'"' : '').
 						($show_width == 'yes' ? ' width="'.$thumb_w.'"' : '').
@@ -906,7 +906,7 @@ upm_image_install();
 
 			case 'image':
 			default:
-				$out = '<img src="'.$img_url.$img.'"'.
+				$out = '<img loading="lazy" src="'.$img_url.$img.'"'.
 					( ($id and !$wraptag) ? ' id="'.$id.'"' : '').
 					( ($class and !$wraptag) ? ' class="'.$class.'"' : '').
 					($show_width == 'yes' ? ' width="'.$row['w'].'"' : '').

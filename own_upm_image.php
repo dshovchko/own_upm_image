@@ -17,7 +17,7 @@
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '4.8.1.20200724';
+$plugin['version'] = '4.8.1.20200729';
 $plugin['author'] = 'Dmitry Shovchko';
 $plugin['author_uri'] = 'http://github.com/dshovchko';
 $plugin['description'] = 'More powerful image display';
@@ -1124,5 +1124,6 @@ js;
 
 		return strtr($lang[$what], $atts);
 	}
+
 # --- END PLUGIN CODE ---
 ?>

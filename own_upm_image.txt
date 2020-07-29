@@ -1,4 +1,4 @@
-# own_upm_image v4.8.1.20200724
+# own_upm_image v4.8.1.20200729
 # More powerful image display
 # Dmitry Shovchko
 # http://github.com/dshovchko
@@ -9,12 +9,12 @@
 # Paste the following text into the 'Install plugin' box:
 # ......................................................................
 
-YToxMDp7czo3OiJ2ZXJzaW9uIjtzOjE0OiI0LjguMS4yMDIwMDcyNCI7czo2OiJhdXRob3Ii
+YToxMDp7czo3OiJ2ZXJzaW9uIjtzOjE0OiI0LjguMS4yMDIwMDcyOSI7czo2OiJhdXRob3Ii
 O3M6MTU6IkRtaXRyeSBTaG92Y2hrbyI7czoxMDoiYXV0aG9yX3VyaSI7czoyNzoiaHR0cDov
 L2dpdGh1Yi5jb20vZHNob3ZjaGtvIjtzOjExOiJkZXNjcmlwdGlvbiI7czoyNzoiTW9yZSBw
 b3dlcmZ1bCBpbWFnZSBkaXNwbGF5IjtzOjQ6InR5cGUiO2k6MTtzOjU6ImZsYWdzIjtzOjE6
 IjAiO3M6NDoibmFtZSI7czoxMzoib3duX3VwbV9pbWFnZSI7czo0OiJoZWxwIjtzOjA6IiI7
-czo0OiJjb2RlIjtzOjIzOTIxOiIKdXBtX2ltYWdlX2luc3RhbGwoKTsKCglpZiAodHhwaW50
+czo0OiJjb2RlIjtzOjIzOTIyOiIKdXBtX2ltYWdlX2luc3RhbGwoKTsKCglpZiAodHhwaW50
 ZXJmYWNlID09ICdhZG1pbicpCgl7CgkJYWRkX3ByaXZzKCd1cG1faW1hZ2VfcHJlZnMnLCAn
 MSwyJyk7CgkJcmVnaXN0ZXJfdGFiKCdleHRlbnNpb25zJywgJ3VwbV9pbWFnZV9wcmVmcycs
 ICd1cG1faW1hZ2UnKTsKCQlyZWdpc3Rlcl9jYWxsYmFjaygndXBtX2ltYWdlX3ByZWZzJywg
@@ -457,5 +457,5 @@ b3VuZF9saXN0Jwk9PiAndXBtX2ltYWdlOiByZXF1ZXN0ZWQgaW1hZ2VzIGNvdWxkIG5vdCBi
 ZSBmb3VuZDogJiM4MjIwO3tsaXN0fSYjODIyMTsnLAoJCQknbm90aGluZ19yZXF1ZXN0ZWQn
 CT0+ICd1cG1faW1hZ2U6IG5vIGltYWdlIHdhcyByZXF1ZXN0ZWQuJywKCQkJJ3ByZWZzJwkJ
 CT0+ICd1cG1faW1hZ2UgUHJlZmVyZW5jZXMnCgkJKTsKCgkJcmV0dXJuIHN0cnRyKCRsYW5n
-WyR3aGF0XSwgJGF0dHMpOwoJfSI7czozOiJtZDUiO3M6MzI6IjFkZmFjMjQ5N2M4YjFjMmNi
-NDVkNTM0N2E5NmEwYmIzIjt9
+WyR3aGF0XSwgJGF0dHMpOwoJfQoiO3M6MzoibWQ1IjtzOjMyOiJmN2NmMDc1NzMxNDA0MjRi
+NWM0YmE5ZDUyOWM5MzNjNCI7fQ==

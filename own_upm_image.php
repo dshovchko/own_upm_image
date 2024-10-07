@@ -17,8 +17,8 @@
 // 1 = Plugin help is in raw HTML.  Not recommended.
 # $plugin['allow_html_help'] = 0;
 
-$plugin['version'] = '4.8.1.20200729';
-$plugin['author'] = 'Dmitry Shovchko';
+$plugin['version'] = '4.8.8.20241007';
+$plugin['author'] = 'Dmytro Shovchko';
 $plugin['author_uri'] = 'http://github.com/dshovchko';
 $plugin['description'] = 'More powerful image display';
 
@@ -74,10 +74,12 @@ upm_image_install();
 	{
 		Txp::get('\Textpattern\Tag\Registry')
 		 ->register('upm_image')
+		 ->register('upm_img_full_width')
 		 ->register('upm_img_thumb_width')
 		 ->register('upm_img_full_url')
 		 ->register('upm_img_alt')
 		 ->register('upm_img_thumb_url')
+		 ->register('upm_img_full_height')
 		 ->register('upm_img_thumb_height')
 		 ->register('upm_img_caption');
 
